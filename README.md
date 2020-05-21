@@ -10,9 +10,9 @@ My product Stylebook allows users to find their basic wardrobe key pieces based 
 
 ## Screenshots
 
-![Main Page](docs/index.png)
+![Main Page](docs/main.png)
 ![Page with results of quiz](docs/result.png)
-![Page with links](docs/link.png)
+![Page with links](docs/links.png)
 
 ## Features:
 

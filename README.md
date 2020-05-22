@@ -6,7 +6,7 @@ Student Name: Golovnev Sergei
 
 ## StyleList
 
-My product StyleList allows users to find their basic wardrobe key pieces based on their style preferences. User goes through a quiz where she is asked to choose between 2 outfits, then the product picks 4 most frequently liked outfits and shown it to user. Then user clicks on them and the product provides list of items used on the pictures.
+My product StyleList allows users to find their basic wardrobe key pieces based on their style preferences. User goes through a quiz where they is asked to choose between 2 outfits, then the product picks 4 most frequently liked outfits and shown it to user. Then user clicks on them and the product provides list of items used on the pictures.
 
 ## Screenshots
 

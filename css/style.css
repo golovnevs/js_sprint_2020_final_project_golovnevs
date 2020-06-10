@@ -11,18 +11,20 @@ header {
 .nameInput {
 height: 32px;
 }
+
 label {
   font-size: 24px;
-}
-
-.main {
-
 }
 
 .quiz {
 display: flex;
 justify-content: center;
 text-align:center;
+}
+
+.splitter {
+  margin-top: 22%;
+  font-size: 32px;
 }
 
 .picWrapper {
@@ -83,13 +85,19 @@ a {
 	background-color:black;
   border: none;
   color: white;
-  padding: 10px 32px;
+  padding: 20px 64px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 32px;
+  margin: 40px 2px;
   cursor: pointer;
 }
 
+.inputForms {
+margin: auto;
+width: 70%;
+text-align: center;
+padding: 10px;
+}
   

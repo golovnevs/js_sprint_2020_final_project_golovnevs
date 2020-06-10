@@ -98,12 +98,10 @@ let outfits = [{
 
 let l = 0;
 let r = 1;
-
-function displayQuiz() {
-
-quizDiv = document.createElement("div");
-quizDiv.setAttribute("class", "quiz");
 const main = document.getElementById('main');
+function displayQuiz() {
+ quizDiv = document.createElement("div");
+ quizDiv.setAttribute("class", "quiz");
 if (l <= 5 && r <= 5) {
   main.innerHTML = `
   <h1 class="mainHeader">What would you prefer?</h1>
@@ -116,6 +114,9 @@ if (l <= 5 && r <= 5) {
         <div class="text">❤️</div>
       </div>
     </div>
+    <div id="spliter" class="splitter">
+    VS
+    </div>
     <div id="rightPic" class="picWrapper">
       <a>
         <img src=${outfits[r].imgSrc} class="image">
@@ -127,84 +128,17 @@ if (l <= 5 && r <= 5) {
   </div>
   `;
 } else {
-  main.innerHTML = `
-  <h2>Here are the most liked outfits</h2>
-  <h3>[Tags for outfits]</h3>
-  <div class="quiz">
-    <a id="leftRes" class="picWrapper">
-      <img src=${outfits[0].imgSrc} class="image">
-    </a>
-    <a id="centerRes" class="picWrapper">
-      <img src=${outfits[5].imgSrc} class="image">
-    </a>
-    <a id="rightRes" class="picWrapper">
-      <img src=${outfits[6].imgSrc} class="image">
-    </a>
-  </div>        
-  `;
-  
-  resultLeft = document.getElementById("leftRes"); 
-  resultLeft.addEventListener('click', function() {
-    main.innerHTML = `
-    <h2>Here are the most liked outfits</h2>
-    <h3>[Tags for outfits]</h3>
-    <div class="quiz">
-      <a id="leftRes" class="picWrapper">
-        <img src=${outfits[0].imgSrc} class="image">
-      </a>
-      <a id="centerRes" class="picWrapper">
-        <img src=${outfits[5].imgSrc} class="image">
-      </a>
-      <a id="rightRes" class="picWrapper">
-        <img src=${outfits[6].imgSrc} class="image">
-      </a>
-    </div>
-    <h1>[links for outfit 1]</h1>
-    `;
-  });
+  result();
 
+  resultLeft = document.getElementById("leftRes");
   resultCenter = document.getElementById("centerRes");
-  resultCenter.addEventListener('click', function() {
-    main.innerHTML = `
-    <h2>Here are the most liked outfits</h2>
-    <h3>[Tags]</h3>
-    <div class="quiz">
-      <a id="leftRes" class="picWrapper">
-        <img src=${outfits[0].imgSrc} class="image">
-      </a>
-      <a id="centerRes" class="picWrapper">
-        <img src=${outfits[5].imgSrc} class="image">
-      </a>
-      <a id="rightRes" class="picWrapper">
-        <img src=${outfits[6].imgSrc} class="image">
-      </a>
-    </div>
-    <h1>[links for outfit 2]</h1>
-    `;
-  });
-
-  resultRight = document.getElementById("rightRes");
-  resultRight.addEventListener('click', function() {
-    main.innerHTML = `
-    <h2>Here are the most liked outfits</h2>
-    <h3>[Tags]</h3>
-    <div class="quiz">
-      <a id="leftRes" class="picWrapper">
-        <img src=${outfits[0].imgSrc} class="image">
-      </a>
-      <a id="centerRes" class="picWrapper">
-        <img src=${outfits[5].imgSrc} class="image">
-      </a>
-      <a id="rightRes" class="picWrapper">
-        <img src=${outfits[6].imgSrc} class="image">
-      </a>
-    </div>
-    <h1>[links for outfit 3]</h1>
-    `;
-  });
+  resultRight = document.getElementById("rightRes"); 
+  
+  resultLeft.addEventListener('click', resultL); 
+  resultCenter.addEventListener('click', resultC); 
+  resultRight.addEventListener('click', resultR);
 }
 
-main.appendChild(quizDiv);
 voteRight = document.getElementById("rightPic");
 voteRight.addEventListener('click', voteCounterRight);
 voteLeft = document.getElementById("leftPic");
@@ -229,4 +163,107 @@ if (l == r - 1) {
   displayQuiz();
 } else l++;
 displayQuiz();
+};
+
+function result() {
+  main.innerHTML = `
+  <h2>Here are the most liked outfits. Click on it!</h2>
+  <h3>[Tags for outfits]</h3>
+  <div class="quiz">
+    <a id="leftRes" class="picWrapper">
+      <img src=${outfits[0].imgSrc} class="image">
+    </a>
+    <a id="centerRes" class="picWrapper">
+      <img src=${outfits[5].imgSrc} class="image">
+    </a>
+    <a id="rightRes" class="picWrapper">
+      <img src=${outfits[6].imgSrc} class="image">
+    </a>
+  </div>
+  `;
+  resultLeft = document.getElementById("leftRes");
+  resultCenter = document.getElementById("centerRes");
+  resultRight = document.getElementById("rightRes"); 
+  
+  resultLeft.addEventListener('click', resultL); 
+  resultCenter.addEventListener('click', resultC); 
+  resultRight.addEventListener('click', resultR);
+};
+
+function resultR() {
+  main.innerHTML = `
+  <h2>Here are the most liked outfits</h2>
+  <h3>[Tags for outfits]</h3>
+  <div class="quiz">
+    <a id="leftRes" class="picWrapper">
+      <img src=${outfits[0].imgSrc} class="image">
+    </a>
+    <a id="centerRes" class="picWrapper">
+      <img src=${outfits[5].imgSrc} class="image">
+    </a>
+    <a id="rightRes" class="picWrapper">
+      <img src=${outfits[6].imgSrc} class="image">
+    </a>
+  </div>
+  <h1>[links for outfit 3]</h1>
+  `;
+  resultLeft = document.getElementById("leftRes");
+  resultCenter = document.getElementById("centerRes");
+  resultRight = document.getElementById("rightRes"); 
+  
+  resultLeft.addEventListener('click', resultL); 
+  resultCenter.addEventListener('click', resultC); 
+  resultRight.addEventListener('click', resultR);
+};
+
+function resultC() {
+  main.innerHTML = `
+  <h2>Here are the most liked outfits</h2>
+  <h3>[Tags for outfits]</h3>
+  <div class="quiz">
+    <a id="leftRes" class="picWrapper">
+      <img src=${outfits[0].imgSrc} class="image">
+    </a>
+    <a id="centerRes" class="picWrapper">
+      <img src=${outfits[5].imgSrc} class="image">
+    </a>
+    <a id="rightRes" class="picWrapper">
+      <img src=${outfits[6].imgSrc} class="image">
+    </a>
+  </div>
+  <h1>[links for outfit 2]</h1>
+  `;
+  resultLeft = document.getElementById("leftRes");
+  resultCenter = document.getElementById("centerRes");
+  resultRight = document.getElementById("rightRes"); 
+  
+  resultLeft.addEventListener('click', resultL); 
+  resultCenter.addEventListener('click', resultC); 
+  resultRight.addEventListener('click', resultR);
+};
+
+function resultL() {
+  main.innerHTML = `
+  <h2>Here are the most liked outfits</h2>
+  <h3>[Tags for outfits]</h3>
+  <div class="quiz">
+    <a id="leftRes" class="picWrapper">
+      <img src=${outfits[0].imgSrc} class="image">
+    </a>
+    <a id="centerRes" class="picWrapper">
+      <img src=${outfits[5].imgSrc} class="image">
+    </a>
+    <a id="rightRes" class="picWrapper">
+      <img src=${outfits[6].imgSrc} class="image">
+    </a>
+  </div>
+  <h1>[links for outfit 1]</h1>
+  `;
+  resultLeft = document.getElementById("leftRes");
+  resultCenter = document.getElementById("centerRes");
+  resultRight = document.getElementById("rightRes"); 
+  
+  resultLeft.addEventListener('click', resultL); 
+  resultCenter.addEventListener('click', resultC); 
+  resultRight.addEventListener('click', resultR);
 };

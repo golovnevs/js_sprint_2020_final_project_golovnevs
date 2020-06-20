@@ -293,14 +293,13 @@ let links = [
 ];
 
 let liked = [];
-let likedUniq = [];
 let leftOutfit = 0;
 let rightOutfit = 1; 
 let steps = 0;
 let totalResult =0;
 
 function displayContent() {
-  if (steps <= outfits.length-2) {
+  if (steps <= 28) {
     displayQuiz();
   } else {
       displayResult();
@@ -381,7 +380,7 @@ function voteCounterRight() {
 };
 
 function displayResult() {
-  removeDuplicates();
+  likedUniq = removeDuplicates();
   leftOutfit = 0;
   rightOutfit = 1;
   steps = 0; 
@@ -395,7 +394,7 @@ function displayResult() {
     outfitCard.setAttribute("class", "resultBlock");
     outfitCard.innerHTML = `
     <a>
-    <img src=${likedUniq[i].imgSrc}>
+    <img src=${removeDuplicates()[i].imgSrc}>
     </a>
     <div class="desc">${likedUniq[i].items}</div>
     `;
@@ -404,11 +403,11 @@ function displayResult() {
 };
 
 function removeDuplicates() {
+  let likedUniq=[];
   for (let i = 0; i < liked.length; i++) 
   { if (liked[i]!=liked[i+1]) {
     likedUniq.push(liked[i]);
+    }
   }
-   }
+  return likedUniq;
 };
-
-

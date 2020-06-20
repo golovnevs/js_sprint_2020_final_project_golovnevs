@@ -8,8 +8,8 @@ header {
 	text-align: center;
 }
 
-.nameInput {
-height: 32px;
+.inputs {
+  height: 32px;
 }
 
 label {
@@ -17,20 +17,15 @@ label {
 }
 
 .quiz {
-display: flex;
-justify-content: center;
-text-align:center;
-}
-
-.splitter {
-  margin-top: 22%;
-  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  text-align:center;
 }
 
 .picWrapper {
-  width: max-content;
-  text-decoration: none;
-  padding: 0;
+text-decoration: none;
+ margin-left: 40px;
+ margin-right: 40px;
 }
 
 .picWrapper:hover .image {
@@ -46,11 +41,9 @@ text-align:center;
 }
   
 .image {
-	opacity: 1;
-	transition: .5s ease;
-  backface-visibility: hidden;
-  margin: 15px;
- width: 70%;
+  opacity: 1;
+  transition: .5s ease;
+  width: 100%;
 }
   
 .middle {
@@ -60,11 +53,7 @@ text-align:center;
 }
    
 .text {
-	font-size: 50px;
-}
-
-a {
-	text-decoration: none;
+	font-size: 100px;
 }
 
 .mainHeader {
@@ -95,9 +84,30 @@ a {
 }
 
 .inputForms {
-margin: auto;
-width: 70%;
-text-align: center;
-padding: 10px;
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  padding: 10px;
 }
-  
+
+div.resultBlock {
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em;
+  border: 1px solid #ccc;
+  width: 18%;
+}
+    
+div.resultBlock:hover {
+  border: 1px solid #777;
+}
+    
+div.resultBlock img {
+  width: 100%;
+}
+    
+div.desc {
+    padding: 5px;
+    min-height: 70px;
+    text-align: center; 
+}

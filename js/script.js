@@ -332,7 +332,6 @@ function displayQuiz() {
     voteRight.addEventListener('click', voteCounterRight);
     voteLeft = document.getElementById("leftPic");
     voteLeft.addEventListener('click', voteCounterLeft);
-    console.log(steps);
   } else {
       displayResult();
     }

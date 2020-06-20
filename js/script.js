@@ -328,14 +328,14 @@ function displayQuiz() {
       </div>
     </div>
     `;
+    voteRight = document.getElementById("rightPic");
+    voteRight.addEventListener('click', voteCounterRight);
+    voteLeft = document.getElementById("leftPic");
+    voteLeft.addEventListener('click', voteCounterLeft);
+    console.log(steps);
   } else {
       displayResult();
     }
-  voteRight = document.getElementById("rightPic");
-  voteRight.addEventListener('click', voteCounterRight);
-  voteLeft = document.getElementById("leftPic");
-  voteLeft.addEventListener('click', voteCounterLeft);
-  console.log(steps);
 };
 
 const startBtn = document.getElementById('start');

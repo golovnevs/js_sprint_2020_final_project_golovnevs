@@ -305,7 +305,7 @@ function displayQuiz() {
   quizDiv.setAttribute("class", "quiz");
   if (steps <= outfits.length-2) {
     main.innerHTML = `
-    <h1 class="mainHeader">What would you prefer?</h1>
+    <h1 class="mainHeader">Select outfit you’re preferring.s</h1>
     <div class="quiz">
     <div id="leftPic" class="picWrapper">
       <a>
@@ -382,7 +382,7 @@ function displayResult() {
   rightOutfit = 1;
   steps = 0; 
   table = document.getElementById('resultTable');
-  table.innerHTML = ` <h1>Here is outfits</h1>
+  table.innerHTML = ` <h1>Here is the most liked outfits:</h1>
   `;
   main.innerHTML = `
     `; 

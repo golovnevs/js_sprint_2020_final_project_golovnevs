@@ -305,7 +305,7 @@ function displayQuiz() {
   quizDiv.setAttribute("class", "quiz");
   if (steps <= outfits.length-2) {
     main.innerHTML = `
-    <h1 class="mainHeader">Select outfit you’re preferring.s</h1>
+    <h1 class="mainHeader">Select outfit you’re preferring</h1>
     <div class="quiz">
     <div id="leftPic" class="picWrapper">
       <a>

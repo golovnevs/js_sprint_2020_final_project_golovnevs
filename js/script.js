@@ -299,11 +299,19 @@ let rightOutfit = 1;
 let steps = 0;
 let totalResult =0;
 
-function displayQuiz() {
+function displayContent() {
+  if (steps <= outfits.length-2) {
+    displayQuiz();
+  } else {
+      displayResult();
+    }
+};
+
+function displayQuiz () {
   const main = document.getElementById('main');
   quizDiv = document.createElement("div");
   quizDiv.setAttribute("class", "quiz");
-  if (steps <= outfits.length-2) {
+  
     main.innerHTML = `
     <h1 class="mainHeader">Select outfit you’re preferring</h1>
     <div class="quiz">
@@ -332,13 +340,10 @@ function displayQuiz() {
     voteRight.addEventListener('click', voteCounterRight);
     voteLeft = document.getElementById("leftPic");
     voteLeft.addEventListener('click', voteCounterLeft);
-  } else {
-      displayResult();
-    }
 };
 
 const startBtn = document.getElementById('start');
-startBtn.addEventListener('click', displayQuiz);
+startBtn.addEventListener('click', displayContent);
 let leftClickCounter = 0;
 let rightClickCounter = 0;
 
@@ -356,7 +361,7 @@ function voteCounterLeft() {
     leftClickCounter++;
     totalResult = leftOutfit;
     outfits[leftOutfit].rank++;
-    displayQuiz();
+    displayContent();
 };
 function voteCounterRight() {
   leftClickCounter = 0;
@@ -372,7 +377,7 @@ function voteCounterRight() {
   rightClickCounter++;
   totalResult = rightOutfit;
   outfits[rightOutfit].rank++;
-  displayQuiz();
+  displayContent();
 };
 
 function displayResult() {

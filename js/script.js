@@ -339,7 +339,6 @@ function displayQuiz () {
 };
 
 function displayResult() {
-  likedUniq = removeDuplicates();
   leftOutfit = 0;
   rightOutfit = 1;
   steps = 0; 
@@ -348,14 +347,14 @@ function displayResult() {
   `;
   main.innerHTML = `
   `; 
-  for (let i = 0; i < likedUniq.length; i++) {
+  for (let i = 0; i < removeDuplicates().length; i++) {
     outfitCard = document.createElement("div");
     outfitCard.setAttribute("class", "resultBlock");
     outfitCard.innerHTML = `
       <a>
         <img src=${removeDuplicates()[i].imgSrc}>
       </a>
-      <div class="desc">${likedUniq[i].items}</div>
+      <div class="desc">${removeDuplicates()[i].items}</div>
     `;
     table.appendChild(outfitCard);
   } 

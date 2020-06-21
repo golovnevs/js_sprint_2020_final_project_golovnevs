@@ -19,7 +19,8 @@ label {
 .quiz {
   display: flex;
   justify-content: center;
-  text-align:center;
+  text-align: center;
+  max-height: 500px;
 }
 
 .picWrapper {
@@ -56,7 +57,7 @@ text-decoration: none;
 	font-size: 100px;
 }
 
-.mainHeader {
+.headers {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,7 +108,7 @@ div.resultBlock img {
 }
     
 div.desc {
-    padding: 5px;
-    min-height: 70px;
-    text-align: center; 
+  padding: 5px;
+  min-height: 70px;
+  text-align: center; 
 }

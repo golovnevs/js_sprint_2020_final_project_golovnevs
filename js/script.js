@@ -288,11 +288,11 @@ let links = [
 let liked = [];
 let leftOutfit = 0;
 let rightOutfit = 1; 
-let steps = 0;
+let steps = 1;
 let totalResult =0;
 
 function displayContent() {
-  if (steps <= 28) {
+  if (steps <= 20) {
     displayQuiz();
   } else {
       displayResult();
@@ -305,7 +305,7 @@ function displayQuiz () {
   quizDiv.setAttribute("class", "quiz");
   
   main.innerHTML = `
-    <h1 class="mainHeader">Select outfit you’re preferring</h1>
+    <h1 class="headers">Select outfit you’re preferring</h1>
     <div class="quiz">
     <div id="leftPic" class="picWrapper">
       <a>
@@ -323,8 +323,10 @@ function displayQuiz () {
         <div class="middle">
           <div class="text">❤️</div>
         </div>
+    </div> 
     </div>
-    </div>
+    <div class="headers"><h1>${steps}/20</h1></div>
+    
   `;
   voteRight = document.getElementById("rightPic");
   voteRight.addEventListener('click', voteCounterRight);

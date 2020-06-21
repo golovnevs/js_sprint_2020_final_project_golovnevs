@@ -3,7 +3,7 @@ let outfits = [{
     imgSrc: 'images/1.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' silk blouse', ' beige trouser', ' beltblazer', ' loafer', '  sunglasses', '  tote bag'],
+    items: ['1', '2', '3', '4', '0', '  5'],
     tags: ['sport', ' classic']
   },
   {
@@ -289,14 +289,14 @@ let liked = [];
 let leftOutfit = 0;
 let rightOutfit = 1; 
 let steps = 1;
-let totalResult =0;
+let totalResult = 0;
 const startBtn = document.getElementById('start');
 startBtn.addEventListener('click', displayContent);
 let leftClickCounter = 0;
 let rightClickCounter = 0;
 
 function displayContent() {
-  if (steps <= 20) {
+  if (steps <= 5) {
     displayQuiz();
   } else {
       displayResult();
@@ -354,7 +354,11 @@ function displayResult() {
       <a>
         <img src=${removeDuplicates()[i].imgSrc}>
       </a>
-      <div class="desc">${removeDuplicates()[i].items}</div>
+      <div class="desc"> 
+      ${removeDuplicates()[i].items[function() {
+        a=5;
+          return a;
+      }]}</div>
     `;
     table.appendChild(outfitCard);
   } 
@@ -396,9 +400,9 @@ function voteCounterRight() {
 
 function removeDuplicates() {
   let likedUniq=[];
-  for (let i = 0; i < liked.length; i++) 
-  { if (liked[i]!=liked[i+1]) {
-    likedUniq.push(liked[i]);
+  for (let i = 0; i < liked.length; i++) {
+    if (liked[i]!=liked[i+1]) {
+      likedUniq.push(liked[i]);
     }
   }
   return likedUniq;

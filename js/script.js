@@ -290,6 +290,10 @@ let leftOutfit = 0;
 let rightOutfit = 1; 
 let steps = 1;
 let totalResult =0;
+const startBtn = document.getElementById('start');
+startBtn.addEventListener('click', displayContent);
+let leftClickCounter = 0;
+let rightClickCounter = 0;
 
 function displayContent() {
   if (steps <= 20) {
@@ -334,44 +338,6 @@ function displayQuiz () {
   voteLeft.addEventListener('click', voteCounterLeft);
 };
 
-const startBtn = document.getElementById('start');
-startBtn.addEventListener('click', displayContent);
-let leftClickCounter = 0;
-let rightClickCounter = 0;
-
-function voteCounterLeft() {
-  rightClickCounter = 0;
-  liked.push(outfits[leftOutfit]);
-  if (leftOutfit == 0 && rightOutfit == 1) {
-    rightOutfit = leftOutfit + 2;
-  } else if (leftClickCounter == 0) {
-      rightOutfit = leftOutfit + 1;
-  } else  {
-      rightOutfit++;
-    } 
-  steps++;
-  leftClickCounter++;
-  totalResult = leftOutfit;
-  outfits[leftOutfit].rank++;
-  displayContent();
-};
-function voteCounterRight() {
-  leftClickCounter = 0;
-  liked.push(outfits[rightOutfit]);
-  if (leftOutfit == 0 && rightOutfit == 1) {
-    leftOutfit = rightOutfit + 1;
-  } else if (rightClickCounter == 0) {
-      leftOutfit = rightOutfit + 1;
-  } else {
-      leftOutfit++;
-  }
-  steps++;
-  rightClickCounter++;
-  totalResult = rightOutfit;
-  outfits[rightOutfit].rank++;
-  displayContent();
-};
-
 function displayResult() {
   likedUniq = removeDuplicates();
   leftOutfit = 0;
@@ -393,6 +359,40 @@ function displayResult() {
     `;
     table.appendChild(outfitCard);
   } 
+};
+
+function voteCounterLeft() {
+  rightClickCounter = 0;
+  liked.push(outfits[leftOutfit]);
+  if (leftOutfit == 0 && rightOutfit == 1) {
+    rightOutfit = leftOutfit + 2;
+  } else if (leftClickCounter == 0) {
+      rightOutfit = leftOutfit + 1;
+  } else  {
+      rightOutfit++;
+    } 
+  steps++;
+  leftClickCounter++;
+  totalResult = leftOutfit;
+  outfits[leftOutfit].rank++;
+  displayContent();
+};
+
+function voteCounterRight() {
+  leftClickCounter = 0;
+  liked.push(outfits[rightOutfit]);
+  if (leftOutfit == 0 && rightOutfit == 1) {
+    leftOutfit = rightOutfit + 1;
+  } else if (rightClickCounter == 0) {
+      leftOutfit = rightOutfit + 1;
+  } else {
+      leftOutfit++;
+  }
+  steps++;
+  rightClickCounter++;
+  totalResult = rightOutfit;
+  outfits[rightOutfit].rank++;
+  displayContent();
 };
 
 function removeDuplicates() {

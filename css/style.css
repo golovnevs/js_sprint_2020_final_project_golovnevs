@@ -89,13 +89,14 @@ a {
   background-color: #142867;;
 }
 
-div.resultBlock {
+div.resultBlock { 
+  background: #f1f1f1;
   display: inline-flex;
   margin: 1em;
   border: 1px solid #ccc;
   width: 40%;
   max-height: 600px;
-}
+}		
     
 div.resultBlock:hover {
   border: 1px solid #777;
@@ -120,21 +121,21 @@ div.desc {
 }
 
 body{
-	font-family: "Gill Sans MT, Gill Sans, Futura, Century Gothic, sans-serif";
-	background-image: url('background.jpg');
-	background-repeat: repeat;
-	margin: 0;
-	padding: 0;
-	font-weight: 400;
-  }
-  
-  #general{
-	display: block;
-	width: 100%;
+  font-family: "Gill Sans MT, Gill Sans, Futura, Century Gothic, sans-serif";
+  background-image: url('background.jpg');
+  background-repeat: repeat;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+#general{
+  display: block;
+width: 100%;
 	margin: 0px auto;
   }
   
-  #container{
+#container{
 	background-image: url('background.jpg');
 	background-repeat: repeat;
 	display: block;
@@ -145,7 +146,7 @@ body{
 	padding-top: 80px;
   }
   
-  #container .greeting{
+#container .greeting{
 	position: absolute;
 	left: 40%;
 	margin-left: -110px;
@@ -161,24 +162,24 @@ body{
 	z-index: 999 !important;
   }
   
-  .boxshadow { 
-		width: 80%;
-		/*max-width: 588px;
-		left: 50%;
-		margin-left: -294px;
-		*/ 
-		margin: 0px auto !important;
-		padding-top: 60px;
-		height: 250px;
-		text-align:center;
-		background-color: #b2def7;
-		border: 3px solid #000 !important; 
-		outline: none !important; 
-		-webkit-box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1) !important; 
-		-moz-box-shadow:    12px 12px 0px 0px rgba(0, 0, 0, 1) !important;
-		box-shadow:         12px 12px 0px 0px rgba(0, 0, 0, 1) !important;
-		z-index: 99;
-	  }
+.boxshadow { 
+	width: 80%;
+	/*max-width: 588px;
+	left: 50%;
+	margin-left: -294px;
+	*/ 
+	margin: 0px auto !important;
+	padding-top: 60px;
+	height: 250px;
+	text-align:center;
+	background-color: #b2def7;
+	border: 3px solid #000 !important; 
+	outline: none !important; 
+	-webkit-box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1) !important; 
+	-moz-box-shadow:    12px 12px 0px 0px rgba(0, 0, 0, 1) !important;
+	box-shadow:         12px 12px 0px 0px rgba(0, 0, 0, 1) !important;
+	z-index: 99;
+	}
 	  
 	  
   .ex{

@@ -6,6 +6,7 @@
 
 header {
 	text-align: center;
+	font-family: arial
 }
 
 label {
@@ -13,7 +14,7 @@ label {
 }
 
 .quiz {
-   font-family: arial;
+   font-family: Arial;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -58,7 +59,7 @@ text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Gill Sans MT, Gill Sans, Futura, Century Gothic, sans-serif;
+  font-family: Arial;
 
   
 }
@@ -94,8 +95,11 @@ div.resultBlock {
   display: inline-flex;
   margin: 1em;
   border: 1px solid #ccc;
-  width: 40%;
+  max-width: 40%;
   max-height: 600px;
+  font-family: Arial;
+  font-size: 12px;
+  color: #000;
 }		
     
 div.resultBlock:hover {
@@ -112,16 +116,16 @@ div.desc {
   min-height: 70px;
   text-align: right; 
   margin: 1em;
-  font-weight: 700;
-  letter-spacing: 2px;
-  font-size: 32px; 
-  color: #142867;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 30px; 
+  color: black;
   text-align: left;
 
 }
 
 body{
-  font-family: "calibri";
+  font-family: Arial;
   background-image: url('background.jpg');
   background-repeat: repeat;
   margin: 0;
@@ -155,7 +159,7 @@ width: 100%;
 	margin-top: -20px;
 	width: 450px;
 	font-size: 26px;
-	font-family: arial;
+	font-family: Arial;
 	font-weight: 200;
 	letter-spacing: 6px;
 	color: #fff;
@@ -201,7 +205,7 @@ width: 100%;
   background-color: white;
   border: white;
   border-bottom: 4px dotted black;
-   font-family: arial;
+   font-family: Arial;
 }
 .nameInput:focus {
 	
@@ -218,7 +222,7 @@ width: 100%;
 	letter-spacing: 2px;
 	font-size: 32px; 
 	color: black;
-	 font-family: arial;
+	 font-family: Arial;
   }
   
   .intro{
@@ -228,7 +232,7 @@ width: 100%;
 	font-size: 32px; 
 	color: black;
 	padding-top: 10px;
-	 font-family: arial;
+	 font-family: Arial;
   }
   
   /* .highlight{

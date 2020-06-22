@@ -3,232 +3,232 @@ let outfits = [{
     imgSrc: 'images/1.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: ['1', '2', '3', '4', '0', '  5'],
-    tags: ['sport', ' classic']
+    items: ['1', '2', '3', '4', '0', '5'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 3,
     imgSrc: 'images/3.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' sweatshirt', ' leather trousers', ' heels', ' chain necklace'],
-    tags: ['sport', ' classic']
+    items: ['sweatshirt', 'leather trousers', 'heels', 'chain necklace'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 4,
     imgSrc: 'images/4.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' white shirt', ' skirt', ' loafers', ' sunglasses', ' gold bracelets', ' watches', ' belt'],
-    tags: [' sport', ' classic']
+    items: ['white shirt', 'skirt', 'loafers', 'sunglasses', 'gold bracelets', 'watches', 'belt'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 5,
     imgSrc: 'images/5.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' blazer', ' turtleneck sweater', ' loafers', ' wide leg jeans', ' chain necklace',  'bag'],
-    tags: ['sport', ' classic']
+    items: ['blazer', 'turtleneck sweater', 'loafers', 'wide leg jeans', 'chain necklace',  'bag'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 6,
     imgSrc: 'images/6.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' slip dress', ' sunglasses', ' straw bag', ' white sneakers'],
-    tags: ['sport', ' classic']
+    items: ['slip dress', 'sunglasses', 'straw bag', 'white sneakers'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 7,
     imgSrc: 'images/7.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' oversize sweater', ' culottes', ' heels', ' bag',  'chain necklace'],
-    tags: ['sport', ' classic']
+    items: ['oversize sweater', 'culottes', 'heels', 'bag',  'chain necklace'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 8,
     imgSrc: 'images/8.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' white shirt', ' trousers', ' cross body bag', ' heels', ' watches'],
-    tags: ['sport', ' classic']
+    items: ['white shirt', 'trousers', 'cross body bag', 'heels', 'watches'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 9,
     imgSrc: 'images/9.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' black t-shirt', ' culottes', ' loafers', ' chain necklace'],
-    tags: ['sport', ' classic']
+    items: ['black t-shirt', 'culottes', 'loafers', 'chain necklace'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 10,
     imgSrc: 'images/10.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' silk blouse', ' straight jeans', ' heels', ' cross body bag', ' chain necklace'],
-    tags: ['sport', ' classic']
+    items: ['silk blouse', 'straight jeans', 'heels', 'cross body bag', 'chain necklace'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 11,
     imgSrc: 'images/11.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' sweater', ' trousers', ' heels', ' bag', ' earring s'],
-    tags: ['sport', ' classic']
+    items: ['sweater', 'trousers', 'heels', 'bag', 'earring s'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 12,
     imgSrc: 'images/12.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' biker jacket', ' printed midi dress', ' cross body bag', ' biker boots', ' sunglasses'],
-    tags: ['sport', ' classic']
+    items: ['biker jacket', 'printed midi dress', 'cross body bag', 'biker boots', 'sunglasses'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 13,
     imgSrc: 'images/13.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' sweater', ' trousers', ' clutch bag',  'heels', ' watches', ' earring s'],
-    tags: ['sport', ' classic']
+    items: ['sweater', 'trousers', 'clutch bag',  'heels', 'watches', 'earring s'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 14,
     imgSrc: 'images/14.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' biker jacket', ' printed midi dress', ' biker boots', ' cross body bag', ' sunglasses'],
-    tags: ['sport', ' classic']
+    items: ['biker jacket', 'printed midi dress', 'biker boots', 'cross body bag', 'sunglasses'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 15,
     imgSrc: 'images/15.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' shirt-dress', ' straw bag', ' white sneakers'],
-    tags: ['sport', ' classic']
+    items: ['shirt-dress', 'straw bag', 'white sneakers'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 16,
     imgSrc: 'images/16.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' white t-shirt', ' straight jeans', ' tote bag', ' white sneakers', ' sunglasses'],
-    tags: ['sport', ' classic']
+    items: ['white t-shirt', 'straight jeans', 'tote bag', 'white sneakers', 'sunglasses'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 17,
     imgSrc: 'images/17.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' striped t-shirt', ' bag',  'belt', ' trousers', ' white sneakers', ' sunglasses', ' earring s', ' watches'],
-    tags: ['sport', ' classic']
+    items: ['striped t-shirt', 'bag',  'belt', 'trousers', 'white sneakers', 'sunglasses', 'earring s', 'watches'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 18,
     imgSrc: 'images/18.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' striped t-shirt', ' trenchcoat', ' cross body bag', ' straight jeans', ' white sneakers', ' sunglasses'],
-    tags: ['sport', ' classic']
+    items: ['striped t-shirt', 'trenchcoat', 'cross body bag', 'straight jeans', 'white sneakers', 'sunglasses'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 19,
     imgSrc: 'images/19.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' sweatshirt', ' sunglasses', ' chain necklace', ' watches', ' cross body bag', ' midi skirt', ' biker boots', ' bracelet'],
-    tags: ['sport', ' classic']
+    items: ['sweatshirt', 'sunglasses', 'chain necklace', 'watches', 'cross body bag', 'midi skirt', 'biker boots', 'bracelet'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 20,
     imgSrc: 'images/20.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' white shirt', ' straight jeans', ' sling-back shoes', ' straw bag'],
-    tags: ['sport', ' classic']
+    items: ['white shirt', 'straight jeans', 'sling-back shoes', 'straw bag'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 21,
     imgSrc: 'images/21.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' white t-shirt', ' sunglasses', ' shorts', ' straw bag', ' sandals'],
-    tags: ['sport', ' classic']
+    items: ['white t-shirt', 'sunglasses', 'shorts', 'straw bag', 'sandals'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 22,
     imgSrc: 'images/22.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' blazer', ' white t-shirt', ' cross body bag', ' midi skirt', ' heels'],
-    tags: ['sport', ' classic']
+    items: ['blazer', 'white t-shirt', 'cross body bag', 'midi skirt', 'heels'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 23,
     imgSrc: 'images/23.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' biker jacket', ' midi skirt', ' white t-shirt', ' chain necklace', ' cross body bag', ' white sneakers', ' midi skirt'],
-    tags: ['sport', ' classic']
+    items: ['biker jacket', 'midi skirt', 'white t-shirt', 'chain necklace', 'cross body bag', 'white sneakers', 'midi skirt'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 24,
     imgSrc: 'images/24.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' sunglasses', ' white t-shirt', ' midi skirt', ' sandals', ' cross body bag', ' earring s', ' chain necklace'],
-    tags: ['sport', ' classic']
+    items: ['sunglasses', 'white t-shirt', 'midi skirt', 'sandals', 'cross body bag', 'earring s', 'chain necklace'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 25,
     imgSrc: 'images/25.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' sweater', ' midi skirt', ' white sneakers', ' bag',  'sunglasses'],
-    tags: ['sport', ' classic']
+    items: ['sweater', 'midi skirt', 'white sneakers', 'bag',  'sunglasses'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 26,
     imgSrc: 'images/26.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' sweater', ' midi skirt', ' cross body bag', ' white sneakers', ' earrings'],
-    tags: ['sport', ' classic']
+    items: ['sweater', 'midi skirt', 'cross body bag', 'white sneakers', 'earrings'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 27,
     imgSrc: 'images/27.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' blazer', ' trousers', ' black t-shirt', ' loafers'],
-    tags: ['sport', ' classic']
+    items: ['blazer', 'trousers', 'black t-shirt', 'loafers'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 28,
     imgSrc: 'images/28.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' blazer', ' white t-shirt', ' belt', ' chain necklace', ' white sneakers', ' sunglasses'],
-    tags: ['sport', ' classic']
+    items: ['blazer', 'white t-shirt', 'belt', 'chain necklace', 'white sneakers', 'sunglasses'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 29,
     imgSrc: 'images/29.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' biker jacket', ' slip dress', ' biker boots'],
-    tags: ['sport', ' classic']
+    items: ['biker jacket', 'slip dress', 'biker boots'],
+    tags: ['sport', 'classic']
   },
   {
     outfitId: 30,
     imgSrc: 'images/30.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: [' slip dress', ' blazer', ' cross body bag', ' white sneakers', ' sunglasses'],
-    tags: ['sport', ' classic']
+    items: ['slip dress', 'blazer', 'cross body bag', 'white sneakers', 'sunglasses'],
+    tags: ['sport', 'classic']
   }
 ];
 
@@ -236,12 +236,12 @@ let links = [
   {
     id: 1,
     name: 'slip dress',
-    src: '1'
+    src: 'google.com  '
   },
   {
     id: 2,
     name: 'blazer',
-    src: '2'
+    src: 'gmail.com'
   },
   {
     id: 3,
@@ -407,3 +407,15 @@ function removeDuplicates() {
   }
   return likedUniq;
 };
+
+
+// function addLinks() {
+//   for (let i=0; i<removeDuplicates().length; i++) {
+//     console.log(removeDuplicates()[i]);
+//   }
+// };
+
+
+// function test()  {
+//   console.log(links[((outfits[0].items)[0])].src);
+// }

@@ -419,3 +419,8 @@ function removeDuplicates() {
 // function test()  {
 //   console.log(links[((outfits[0].items)[0])].src);
 // }
+
+
+
+
+

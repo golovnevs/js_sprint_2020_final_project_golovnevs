@@ -1,15 +1,11 @@
-body {
+/* body {
 	font-family: "Segoe UI", Arial, sans-serif;
 	background: #f1f1f1;
 	color: #5f5f5f;
-}
+} */
 
 header {
 	text-align: center;
-}
-
-.inputs {
-  height: 32px;
 }
 
 label {
@@ -72,7 +68,11 @@ a {
 }
 
 .startBtn {
-	background-color:black;
+  position: absolute;
+  text-align: center;
+  top: 245px;
+  left: 38%;
+  background-color:black;
   border: none;
   color: white;
   padding: 20px 64px;
@@ -82,13 +82,7 @@ a {
   font-size: 32px;
   margin: 40px 2px;
   cursor: pointer;
-}
-
-.inputForms {
-  margin: auto;
-  width: 70%;
-  text-align: center;
-  padding: 10px;
+  background-color: #e8976c;
 }
 
 div.resultBlock {
@@ -114,3 +108,124 @@ div.desc {
   min-height: 70px;
   text-align: right; 
 }
+
+body{
+	background-image: url('background.jpg');
+	background-repeat: repeat;
+	margin: 0;
+	padding: 0;
+	font-family: Gill Sans MT, Gill Sans, Futura, Century Gothic, sans-serif;
+	font-weight: 400;
+  }
+  
+  #main{
+	display: block;
+	width: 100%;
+	margin: 0px auto;
+  }
+  
+  #container{
+	background-image: url('background.jpg');
+	background-repeat: repeat;
+	display: block;
+	width: 100%;
+	background-color: #fff;
+	margin: 0px auto;
+	text-align: center;
+	padding-top: 80px;
+  }
+  
+  #container .greeting{
+	position: absolute;
+	left: 40%;
+	margin-left: -110px;
+	background-color: #000;
+	padding: 10px;
+	margin-top: -20px;
+	width: 450px;
+	font-size: 26px;
+	font-family: Gill Sans MT, Gill Sans, Futura, Century Gothic, sans-serif;
+	font-weight: 400;
+	letter-spacing: 6px;
+	color: #fff;
+	z-index: 999 !important;
+  }
+  
+  .boxshadow { 
+		width: 80%;
+		/*max-width: 588px;
+		left: 50%;
+		margin-left: -294px;
+		*/ 
+		margin: 0px auto !important;
+		padding-top: 60px;
+		height: 250px;
+		text-align:center;
+		background-color: #b2def7;
+		border: 3px solid #000 !important; 
+		outline: none !important; 
+		-webkit-box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1) !important; 
+		-moz-box-shadow:    12px 12px 0px 0px rgba(0, 0, 0, 1) !important;
+		box-shadow:         12px 12px 0px 0px rgba(0, 0, 0, 1) !important;
+		z-index: 99;
+	  }
+	  
+  }
+  
+  .ex{
+	font-family: Baskerville, Garamond, Georgia, Times, serif;
+	position: relative;
+	font-style: italic;
+	font-size: 36px;
+	letter-spacing: 1px;
+	text-align: center;
+	display: inline-block;
+  }
+  
+  .nameInput {
+  margin: 20px;	  
+  font-size: 30px;
+  font-weight: 600;
+  color: #142867;
+  background-color: #b2def7;
+  border: #b2def7;
+  border-bottom: 4px dotted blue;
+}
+.nameInput:focus {
+	
+  font-size: 30px;
+  font-weight: 600;
+  color: #142867;
+  background-color: #b2def7;
+  border: #b2def7;
+  border-bottom: 4px dotted blue;
+}
+  label {
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-size: 32px; 
+	color: #142867;
+  }
+  
+  .intro{
+	position: relative;
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-size: 32px; 
+	color: #142867;
+	padding-top: 10px;
+  }
+  
+  /* .highlight{
+	background-color: #e8976c;
+	height: 30px;
+	width: 700px;
+	position: absolute;
+	left: 50%;
+	margin-left: -175px;
+	text-align: center;
+	top: 295px;
+	z-index: 1;
+  } */
+  
+  

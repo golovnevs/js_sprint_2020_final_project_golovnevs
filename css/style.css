@@ -86,7 +86,7 @@ a {
   font-size: 32px;
   margin: 40px 2px;
   cursor: pointer;
-  background-color: #142867;;
+  background-color: black;
 }
 
 div.resultBlock { 
@@ -172,7 +172,7 @@ width: 100%;
 	padding-top: 60px;
 	height: 250px;
 	text-align:center;
-	background-color: #b2def7;
+	background-color: white;
 	border: 3px solid #000 !important; 
 	outline: none !important; 
 	-webkit-box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1) !important; 
@@ -197,26 +197,26 @@ width: 100%;
   font-size: 30px;
   font-weight: 600;
   color: #142867;
-  background-color: #b2def7;
-  border: #b2def7;
-  border-bottom: 4px dotted blue;
+  background-color: white;
+  border: white;
+  border-bottom: 4px dotted black;
   font-family: Gill Sans MT, Gill Sans, Futura, Century Gothic, sans-serif;
 }
 .nameInput:focus {
 	
   font-size: 30px;
   font-weight: 600;
-  color: #142867;
-  background-color: #b2def7;
-  border: #b2def7;
-  border-bottom: 5px dotted blue;
+  color: black;
+  background-color: white;
+  border: white;
+  border-bottom: 5px dotted grey;
   outline:none;
 }
   label {
 	font-weight: 700;
 	letter-spacing: 2px;
 	font-size: 32px; 
-	color: #142867;
+	color: black;
 	font-family: Gill Sans MT, Gill Sans, Futura, Century Gothic, sans-serif;
   }
   
@@ -225,7 +225,7 @@ width: 100%;
 	font-weight: 700;
 	letter-spacing: 2px;
 	font-size: 32px; 
-	color: #142867;
+	color: black;
 	padding-top: 10px;
 	font-family: Gill Sans MT, Gill Sans, Futura, Century Gothic, sans-serif;
   }

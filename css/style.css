@@ -90,12 +90,11 @@ a {
 }
 
 div.resultBlock {
-  display: inline-block;
-  vertical-align: top;
+  display: inline-flex;
   margin: 1em;
   border: 1px solid #ccc;
   width: 40%;
-  max-height: 400px;
+  max-height: 600px;
 }
     
 div.resultBlock:hover {
@@ -104,13 +103,20 @@ div.resultBlock:hover {
     
 div.resultBlock img {
   width: 40%;
-  margin: 1em;
+  padding: 1em;
 }
     
 div.desc {
   padding: 5px;
   min-height: 70px;
   text-align: right; 
+  margin: 1em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 32px; 
+  color: #142867;
+  text-align: left;
+
 }
 
 body{

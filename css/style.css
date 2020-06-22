@@ -13,7 +13,7 @@ label {
 }
 
 .quiz {
- font-family: sFutura, Century Gothic, sans-serif;
+   font-family: arial;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -121,7 +121,7 @@ div.desc {
 }
 
 body{
-  font-family: "Gill Sans MT, Gill Sans, Futura, Century Gothic, sans-serif";
+  font-family: "calibri";
   background-image: url('background.jpg');
   background-repeat: repeat;
   margin: 0;
@@ -155,11 +155,12 @@ width: 100%;
 	margin-top: -20px;
 	width: 450px;
 	font-size: 26px;
-	font-family: Gill Sans MT, Gill Sans, Futura, Century Gothic, sans-serif;
-	font-weight: 400;
+	font-family: arial;
+	font-weight: 200;
 	letter-spacing: 6px;
 	color: #fff;
 	z-index: 999 !important;
+	
   }
   
 .boxshadow { 
@@ -195,17 +196,17 @@ width: 100%;
 	width: 180px;
   margin: 20px;	  
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 200;
   color: #142867;
   background-color: white;
   border: white;
   border-bottom: 4px dotted black;
-  font-family: Gill Sans MT, Gill Sans, Futura, Century Gothic, sans-serif;
+   font-family: arial;
 }
 .nameInput:focus {
 	
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 200;
   color: black;
   background-color: white;
   border: white;
@@ -217,7 +218,7 @@ width: 100%;
 	letter-spacing: 2px;
 	font-size: 32px; 
 	color: black;
-	font-family: Gill Sans MT, Gill Sans, Futura, Century Gothic, sans-serif;
+	 font-family: arial;
   }
   
   .intro{
@@ -227,7 +228,7 @@ width: 100%;
 	font-size: 32px; 
 	color: black;
 	padding-top: 10px;
-	font-family: Gill Sans MT, Gill Sans, Futura, Century Gothic, sans-serif;
+	 font-family: arial;
   }
   
   /* .highlight{

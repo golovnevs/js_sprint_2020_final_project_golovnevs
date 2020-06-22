@@ -345,7 +345,7 @@ function displayResult() {
   rightOutfit = 1;
   steps = 0; 
   table = document.getElementById('resultTable');
-  table.innerHTML = `<h1 class="headers">Here is the most liked outfits:</h1>
+  table.innerHTML = `<h1 class="headers">Here are the most liked outfits:</h1>
   `;
   main.innerHTML = `
   `; 

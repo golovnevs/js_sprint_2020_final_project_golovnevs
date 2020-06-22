@@ -43,6 +43,7 @@ text-decoration: none;
   opacity: 1;
   transition: .5s ease;
   width: 100%;
+  cursor: pointer;
 }
   
 .middle {

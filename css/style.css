@@ -246,5 +246,12 @@ width: 100%;
 	top: 295px;
 	z-index: 1;
   } */
-  
+
+  footer {
+	background: black;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	vertical-align: bottom;
+}
   

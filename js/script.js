@@ -330,7 +330,9 @@ function displayQuiz () {
     </div> 
     </div>
     <div class="headers"><h1>${steps}/20</h1></div>
-    
+    <footer>
+  <p>ReDi 2020 </p>
+</footer>
   `;
   voteRight = document.getElementById("rightPic");
   voteRight.addEventListener('click', voteCounterRight);
@@ -346,14 +348,17 @@ function displayResult() {
   table.innerHTML = `<h1 class="headers">Here is the most liked outfits:</h1>
   `;
   main.innerHTML = `
-  `; 
+  <footer>
+  <p>ReDi 2020 </p>
+</footer>`; 
   for (let i = 0; i < removeDuplicates().length; i++) {
     outfitCard = document.createElement("div");
     outfitCard.setAttribute("class", "resultBlock");
     outfitCard.innerHTML = `
       <img src=${removeDuplicates()[i].imgSrc}>
       <div class="desc">${removeDuplicates()[i].items}</div>
-    `;
+      <div class="headers"><h1>${steps}/20</h1></div>
+      `;
     table.appendChild(outfitCard);
   } 
 };

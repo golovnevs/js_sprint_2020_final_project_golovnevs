@@ -3,7 +3,15 @@ let outfits = [{
     imgSrc: 'images/1.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: ['1', ' 2', ' 3', ' 4', ' 0', ' 5'],
+    items: ['silk blouse',' beige trousers',' belt',' loafers',' sunglasses',' tote bag'],
+    tags: ['sport', ' classic']
+  },
+  {
+    outfitId: 2,
+    imgSrc: 'images/2.jpg',
+    rank: 0,
+    rejectedCounter: 0,
+    items: ['sweatshirt', ' leather trousers', ' heels', ' chain necklace'],
     tags: ['sport', ' classic']
   },
   {
@@ -329,7 +337,7 @@ function displayQuiz () {
         </div>
     </div> 
     </div>
-    <div class="headers"><h1>${steps}/20</h1></div>
+    <div class="headers"><h1>${steps}/20(only 5 in test)</h1></div>
     <footer>
   <p>ReDi 2020 </p>
 </footer>
@@ -354,9 +362,14 @@ function displayResult() {
     outfitCard.setAttribute("class", "resultBlock");
     outfitCard.innerHTML = `
       <img src=${removeDuplicates()[i].imgSrc}>
-      <div class="desc">${removeDuplicates()[i].items}</div>
+      <div class="desc ${i}"></div>
     `;
     table.appendChild(outfitCard);
+    linkBlock = document.getElementById("${desc[i]}")
+    linkBlock.innerHTML = `
+    <img src=${removeDuplicates()[i].imgSrc}>
+    <div class="desc ${i}">sdds</div>
+    `;
   } 
 };
 
@@ -404,6 +417,13 @@ function removeDuplicates() {
   return likedUniq;
 };
 
+// function linkWrapper () {
+//   for (let i = 0; i < removeDuplicates().length; i++) {
+//     for (let j = 0; j < removeDuplicates()[i].items.length; j++) {
+//       return removeDuplicates()[i].items[j]
+//     }
+//   } 
+// };
 
 // function addLinks() {
 //   for (let i=0; i<removeDuplicates().length; i++) {

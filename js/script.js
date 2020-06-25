@@ -3,7 +3,7 @@ let outfits = [{
     imgSrc: 'images/1.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: ['silk blouse',' beige trousers',' belt',' loafers',' sunglasses',' tote bag'],
+    items: [0,1,2,3,4,5],
     tags: ['sport', ' classic']
   },
   {
@@ -11,7 +11,7 @@ let outfits = [{
     imgSrc: 'images/2.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: ['sweatshirt', ' leather trousers', ' heels', ' chain necklace'],
+    items: [1,2,3],
     tags: ['sport', ' classic']
   },
   {
@@ -19,7 +19,7 @@ let outfits = [{
     imgSrc: 'images/3.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: ['sweatshirt', ' leather trousers', ' heels', ' chain necklace'],
+    items: [1,2,4,5],
     tags: ['sport', ' classic']
   },
   {
@@ -27,7 +27,7 @@ let outfits = [{
     imgSrc: 'images/4.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: ['white shirt', ' skirt', ' loafers', ' sunglasses', ' gold bracelets', ' watches', ' belt'],
+    items: [2],
     tags: ['sport', ' classic']
   },
   {
@@ -35,7 +35,7 @@ let outfits = [{
     imgSrc: 'images/5.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: ['blazer', ' turtleneck sweater', ' loafers', ' wide leg jeans', ' chain necklace',  ' bag'],
+    items: [1,2,3],
     tags: ['sport', ' classic']
   },
   {
@@ -242,34 +242,34 @@ let outfits = [{
 
 let links = [
   {
+    id: 0,
+    name: 'silk blouse',
+    src: 'https://www.asos.com/search/?q=white+sneakers' 
+  },
+  {
     id: 1,
-    name: ' slip dress',
-    src: ' google.com  ' 
+    name: 'beige trousers',
+    src: 'https://www.asos.com/search/?q=white+sneakers'
   },
   {
     id: 2,
-    name: ' blazer',
-    src: ' gmail.com'
-  },
-  {
-    id: 3,
-    name: ' cross body bag',
-    src: ' 3'
+    name: 'belt',
+    src: 'https://www.asos.com/search/?q=white+sneakers'
   },
    {
+    id: 3,
+    name: 'loafers',
+    src: 'https://www.asos.com/search/?q=white+sneakers'
+  },
+  {
     id: 4,
-    name: ' white sneakers',
-    src: ' 4'
+    name: 'sunglasses',
+    src: 'https://www.asos.com/search/?q=white+sneakers' 
   },
   {
     id: 5,
-    name: ' sunglasses',
-    src: ' 5'
-  },
-  {
-    id: 6,
-    name: ' biker boots',
-    src: ' 6'
+    name: 'tote bag',
+    src: 'https://www.asos.com/search/?q=white+sneakers'
   },
   {
     id: 7,
@@ -303,6 +303,8 @@ const startBtn = document.getElementById('start');
 startBtn.addEventListener('click', displayContent);
 let leftClickCounter = 0;
 let rightClickCounter = 0;
+let x=0;
+let n=0;
 
 function displayContent() {
   if (steps <= 5) {
@@ -349,38 +351,78 @@ function displayQuiz () {
   voteLeft.addEventListener('click', voteCounterLeft);
 };
 
+
 function displayResult() {
   removeDuplicates();
   leftOutfit = 0;
   rightOutfit = 1;
   steps = 0; 
   table = document.getElementById('resultTable');
-  table.innerHTML = `<h1 class="headers">Here are the most liked outfits:</h1>
+  table.innerHTML = `<h1>Here is the most liked outfits:</h1>
   `;
   main.innerHTML = `
   `; 
-  for (let i = 0; i < likedUniq.length; i++) {
+  for (let x = 0; x < likedUniq.length; x++) {
     outfitCard = document.createElement("div");
     outfitCard.setAttribute("class", "resultBlock");
     outfitCard.innerHTML = `
-      <img src=${likedUniq[i].imgSrc}>
-    
+      <a>
+        <img src=${likedUniq[x].imgSrc}>
+      </a>
+      <div class="desc" id = "desc"></div>
+      
     `;
-
     table.appendChild(outfitCard);
-    linkBlock = document.createElement("div");
-    outfitCard.setAttribute("class", "desc");
-     for (let j = 0; j < likedUniq[i].items.lenght; j++){
-    linkBlock.innerHTML = `
-      <li>${likedUniq[i].items[j]}</li>
-      `;
-
-      // outfitCard.appendChild("linkBlock");
+    for (n = 0; n< likedUniq[x].items.length; n++) {
+      console.log(x,n);
+      linksBlock = document.createElement("div");
+      linksBlock.setAttribute("class", "desc");
+      linksBlock.innerHTML = `
+      <a href ="https://www.asos.com/search/?q=${links[likedUniq[x].items[n]].name}" target="_blank">
+      <h3>${links[likedUniq[x].items[n]].name}</h3>
+    </a>
+    `;
+    outfitCard.appendChild(linksBlock);
     }
-   
   } 
-
 };
+
+function newFunction() {
+  return removeDuplicates();
+}
+
+// function displayResult() {
+//   removeDuplicates();
+//   leftOutfit = 0;
+//   rightOutfit = 1;
+//   steps = 0; 
+//   table = document.getElementById('resultTable');
+//   table.innerHTML = `<h1 class="headers">Here are the most liked outfits:</h1>
+//   `;
+//   main.innerHTML = `
+//   `; 
+//   for (let i = 0; i < likedUniq.length; i++) {
+//     outfitCard = document.createElement("div");
+//     outfitCard.setAttribute("class", "resultBlock");
+//     outfitCard.innerHTML = `
+//       <img src=${likedUniq[i].imgSrc}>
+    
+//     `;
+
+//     table.appendChild(outfitCard);
+//     linkBlock = document.createElement("div");
+//     outfitCard.setAttribute("class", "desc");
+//      for (let j = 0; j < likedUniq[i].items.lenght; j++){
+//     linkBlock.innerHTML = `
+//       <li>${likedUniq[i].items[j]}</li>
+//       `;
+
+//       // outfitCard.appendChild("linkBlock");
+//     }
+   
+//   } 
+
+// };
 
 function voteCounterLeft() {
   rightClickCounter = 0;

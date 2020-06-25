@@ -294,6 +294,7 @@ let links = [
 ];
 
 let liked = [];
+let likedUniq=[];
 let leftOutfit = 0;
 let rightOutfit = 1; 
 let steps = 1;
@@ -349,6 +350,7 @@ function displayQuiz () {
 };
 
 function displayResult() {
+  removeDuplicates();
   leftOutfit = 0;
   rightOutfit = 1;
   steps = 0; 
@@ -357,20 +359,27 @@ function displayResult() {
   `;
   main.innerHTML = `
   `; 
-  for (let i = 0; i < removeDuplicates().length; i++) {
+  for (let i = 0; i < likedUniq.length; i++) {
     outfitCard = document.createElement("div");
     outfitCard.setAttribute("class", "resultBlock");
     outfitCard.innerHTML = `
-      <img src=${removeDuplicates()[i].imgSrc}>
-      <div class="desc ${i}"></div>
+      <img src=${likedUniq[i].imgSrc}>
+    
     `;
+
     table.appendChild(outfitCard);
-    linkBlock = document.getElementById("${desc[i]}")
+    linkBlock = document.createElement("div");
+    outfitCard.setAttribute("class", "desc");
+     for (let j = 0; j < likedUniq[i].items.lenght; j++){
     linkBlock.innerHTML = `
-    <img src=${removeDuplicates()[i].imgSrc}>
-    <div class="desc ${i}">sdds</div>
-    `;
+      <li>${likedUniq[i].items[j]}</li>
+      `;
+
+      // outfitCard.appendChild("linkBlock");
+    }
+   
   } 
+
 };
 
 function voteCounterLeft() {
@@ -408,7 +417,7 @@ function voteCounterRight() {
 };
 
 function removeDuplicates() {
-  let likedUniq=[];
+ 
   for (let i = 0; i < liked.length; i++) {
     if (liked[i]!=liked[i+1]) {
       likedUniq.push(liked[i]);
@@ -416,27 +425,5 @@ function removeDuplicates() {
   }
   return likedUniq;
 };
-
-// function linkWrapper () {
-//   for (let i = 0; i < removeDuplicates().length; i++) {
-//     for (let j = 0; j < removeDuplicates()[i].items.length; j++) {
-//       return removeDuplicates()[i].items[j]
-//     }
-//   } 
-// };
-
-// function addLinks() {
-//   for (let i=0; i<removeDuplicates().length; i++) {
-//     console.log(removeDuplicates()[i]);
-//   }
-// };
-
-
-// function test()  {
-//   console.log(links[((outfits[0].items)[0])].src);
-// }
-
-
-
 
 

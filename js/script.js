@@ -273,12 +273,12 @@ let links = [
   },
   {
     id: 7,
-    name: ' black t-shirt',
+    name: 'black t-shirt',
     src: ' 7'
   },
   {
     id: 8,
-    name: ' earring s',
+    name: 'earring s',
     src: ' 8'
   },
   {
@@ -366,63 +366,23 @@ function displayResult() {
     outfitCard = document.createElement("div");
     outfitCard.setAttribute("class", "resultBlock");
     outfitCard.innerHTML = `
-      <a>
-        <img src=${likedUniq[x].imgSrc}>
-      </a>
-      <div class="desc" id = "desc"></div>
-      
+        <img src=${likedUniq[x].imgSrc}>    
     `;
     table.appendChild(outfitCard);
-    for (n = 0; n< likedUniq[x].items.length; n++) {
-      console.log(x,n);
-      linksBlock = document.createElement("div");
-      linksBlock.setAttribute("class", "desc");
-      linksBlock.innerHTML = `
-      <a href ="https://www.asos.com/search/?q=${links[likedUniq[x].items[n]].name}" target="_blank">
-      <h3>${links[likedUniq[x].items[n]].name}</h3>
-    </a>
-    `;
+    linksBlock = document.createElement("div");
     outfitCard.appendChild(linksBlock);
+    linksBlock.setAttribute("class", "desc");
+    for (n = 0; n< likedUniq[x].items.length; n++) {
+      linksList = document.createElement("h3");
+      console.log(x,n);
+      linksList.innerHTML = `
+      <a href ="https://www.asos.com/search/?q=${links[likedUniq[x].items[n]].name}" target="_blank">
+      ${links[likedUniq[x].items[n]].name}
+    `;
+    linksBlock.appendChild(linksList);
     }
   } 
 };
-
-function newFunction() {
-  return removeDuplicates();
-}
-
-// function displayResult() {
-//   removeDuplicates();
-//   leftOutfit = 0;
-//   rightOutfit = 1;
-//   steps = 0; 
-//   table = document.getElementById('resultTable');
-//   table.innerHTML = `<h1 class="headers">Here are the most liked outfits:</h1>
-//   `;
-//   main.innerHTML = `
-//   `; 
-//   for (let i = 0; i < likedUniq.length; i++) {
-//     outfitCard = document.createElement("div");
-//     outfitCard.setAttribute("class", "resultBlock");
-//     outfitCard.innerHTML = `
-//       <img src=${likedUniq[i].imgSrc}>
-    
-//     `;
-
-//     table.appendChild(outfitCard);
-//     linkBlock = document.createElement("div");
-//     outfitCard.setAttribute("class", "desc");
-//      for (let j = 0; j < likedUniq[i].items.lenght; j++){
-//     linkBlock.innerHTML = `
-//       <li>${likedUniq[i].items[j]}</li>
-//       `;
-
-//       // outfitCard.appendChild("linkBlock");
-//     }
-   
-//   } 
-
-// };
 
 function voteCounterLeft() {
   rightClickCounter = 0;

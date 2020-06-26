@@ -43,39 +43,15 @@ let outfits = [{
     imgSrc: 'images/6.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: ['slip dress', ' sunglasses', ' straw bag', ' white sneakers'],
+    items: [2],
     tags: ['sport', ' classic']
   },
   {
     outfitId: 7,
-    imgSrc: 'images/7.jpg',
+    imgSrc: 'images/5.jpg',
     rank: 0,
     rejectedCounter: 0,
-    items: ['oversize sweater', ' culottes', ' heels', ' bag',  ' chain necklace'],
-    tags: ['sport', ' classic']
-  },
-  {
-    outfitId: 8,
-    imgSrc: 'images/8.jpg',
-    rank: 0,
-    rejectedCounter: 0,
-    items: ['white shirt', ' trousers', ' cross body bag', ' heels', ' watches'],
-    tags: ['sport', ' classic']
-  },
-  {
-    outfitId: 9,
-    imgSrc: 'images/9.jpg',
-    rank: 0,
-    rejectedCounter: 0,
-    items: ['black t-shirt', ' culottes', ' loafers', ' chain necklace'],
-    tags: ['sport', ' classic']
-  },
-  {
-    outfitId: 10,
-    imgSrc: 'images/10.jpg',
-    rank: 0,
-    rejectedCounter: 0,
-    items: ['silk blouse', ' straight jeans', ' heels', ' cross body bag', ' chain necklace'],
+    items: [1,2,3],
     tags: ['sport', ' classic']
   }
 ];
@@ -110,26 +86,6 @@ let links = [
     id: 5,
     name: 'tote bag',
     src: 'https://www.asos.com/search/?q=white+sneakers'
-  },
-  {
-    id: 7,
-    name: 'black t-shirt',
-    src: ' 7'
-  },
-  {
-    id: 8,
-    name: 'earring s',
-    src: ' 8'
-  },
-  {
-    id: 9,
-    name: ' midi skirt',
-    src: ' 9'
-  },
-  {
-    id: 10,
-    name: ' white shirt',
-    src: ' 10'
   }
 ];
 
@@ -183,14 +139,13 @@ function displayQuiz () {
     <div class="headers"><h1>${steps}/20(only 5 in test)</h1></div>
     <footer>
   <p>ReDi 2020 </p>
-</footer>
+  </footer>
   `;
   voteRight = document.getElementById("rightPic");
   voteRight.addEventListener('click', voteCounterRight);
   voteLeft = document.getElementById("leftPic");
   voteLeft.addEventListener('click', voteCounterLeft);
 };
-
 
 function displayResult() {
   removeDuplicates();
@@ -206,21 +161,21 @@ function displayResult() {
     outfitCard = document.createElement("div");
     outfitCard.setAttribute("class", "resultBlock");
     outfitCard.innerHTML = `
-        <img src=${likedUniq[x].imgSrc}>    
+      <img src=${likedUniq[x].imgSrc}>    
     `;
     table.appendChild(outfitCard);
     linksBlock = document.createElement("div");
     outfitCard.appendChild(linksBlock);
     linksBlock.setAttribute("class", "desc");
-    for (n = 0; n< likedUniq[x].items.length; n++) {
-      linksList = document.createElement("h3");
-      console.log(x,n);
-      linksList.innerHTML = `
-      <a href ="https://www.asos.com/search/?q=${links[likedUniq[x].items[n]].name}" target="_blank">
-      ${links[likedUniq[x].items[n]].name}
-    `;
-    linksBlock.appendChild(linksList);
-    }
+      for (n = 0; n< likedUniq[x].items.length; n++) {
+        linksList = document.createElement("h3");
+        console.log(x,n);
+        linksList.innerHTML = `
+        <a href ="https://www.asos.com/search/?q=${links[likedUniq[x].items[n]].name}" target="_blank">
+        ${links[likedUniq[x].items[n]].name}
+        `;
+        linksBlock.appendChild(linksList);
+      }
   } 
 };
 
@@ -233,7 +188,7 @@ function voteCounterLeft() {
       rightOutfit = leftOutfit + 1;
   } else  {
       rightOutfit++;
-    } 
+      } 
   steps++;
   leftClickCounter++;
   totalResult = leftOutfit;
@@ -247,9 +202,9 @@ function voteCounterRight() {
   if (leftOutfit == 0 && rightOutfit == 1) {
     leftOutfit = rightOutfit + 1;
   } else if (rightClickCounter == 0) {
-      leftOutfit = rightOutfit + 1;
+    leftOutfit = rightOutfit + 1;
   } else {
-      leftOutfit++;
+    leftOutfit++;
   }
   steps++;
   rightClickCounter++;
@@ -259,7 +214,6 @@ function voteCounterRight() {
 };
 
 function removeDuplicates() {
- 
   for (let i = 0; i < liked.length; i++) {
     if (liked[i]!=liked[i+1]) {
       likedUniq.push(liked[i]);

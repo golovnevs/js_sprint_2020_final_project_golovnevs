@@ -89,7 +89,6 @@ a {
 
 .resultTable{
   display: inline-flex;
-
 }
 
 div.resultBlock { 
@@ -182,6 +181,7 @@ div.resultBlock img {
   border-bottom: 4px dotted #000;
   font-family: Arial;
 }
+
 .nameInput:focus {
   font-size: 30px;
   font-weight: 200;
@@ -191,6 +191,7 @@ div.resultBlock img {
   border-bottom: 5px dotted grey;
   outline:none;
 }
+
 label {
   font-weight: 900;
   letter-spacing: 2px;
